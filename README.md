@@ -50,5 +50,4 @@ This stuff uses eval so its probably not safe for user inputted data, but its on
 
 ## Todo
 
-Get the walton library working so extract-expressions can get imported, and to credit the writer.
-http://github.com/defn/walton/blob/master/src/walton/core.clj#L38
+Get the [walton](http://github.com/defn/walton/blob/master/src/walton/core.clj#L38) library working so extract-expressions can get imported, and to credit the writer.
