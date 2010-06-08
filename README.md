@@ -1,3 +1,5 @@
+## What is Hadouken
+
 Hadouken is a clojure template system. What it aim's to do is take a file
 and extract all the clojure expressions and replace them with their values.
 
@@ -29,6 +31,8 @@ Which returns:
 	</head>
 </html>
 
+## How does it work
+
 Behind the scenes its all just an elaborate format function.
 First the file gets read into a string.
 Second all the expressions from the string are gathered in a sequence.
@@ -40,11 +44,11 @@ The evaluation of these expressions are done inside a temporary namespace. So no
 variables can get in. Forcing you to put all the variables inside of a hashmap as an argument.
 The every key value pair gets def'd inside the temporary namespace.
 
-Warnings
+## Warning
 
 This stuff uses eval so its probably not safe for user inputted data, but its on my todo list.
 
-Todo
+## Todo
 
 Get the walton library working so extract-expressions can get imported, and to credit the writer.
 http://github.com/defn/walton/blob/master/src/walton/core.clj#L38
