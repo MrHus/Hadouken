@@ -3,7 +3,7 @@
 Hadouken is a clojure template system. What it aim's to do is take a file
 and extract all the clojure expressions and replace them with their values.
 
-## Example 1: HTML
+## Example: generating HTML
 
 We have file: test.tpl
 
@@ -32,31 +32,6 @@ Which returns:
 		</title>
 	</head>
 </html>
-
-## Example 2: CSS
-
-//css.tpl
-.someclass
-{
-    color:  (str black);
-}
-
-ul
-{
-    width: (/ height 2);
-}
-
-Calling (template "css.tpl" {'black "#000000", 'height 1024}) will print:
-
-`.someclass
-{
-    color:  #000000;
-}
-
-ul
-{
-    width: 512;
-}` 
 
 ## How does it work
 
