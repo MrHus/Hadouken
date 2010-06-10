@@ -48,7 +48,7 @@ ul
 
 Calling (template "css.tpl" {'black "#000000", 'height 1024}) will print:
 
-.someclass
+`.someclass
 {
     color:  #000000;
 }
@@ -56,7 +56,7 @@ Calling (template "css.tpl" {'black "#000000", 'height 1024}) will print:
 ul
 {
     width: 512;
-} 
+}` 
 
 ## How does it work
 
