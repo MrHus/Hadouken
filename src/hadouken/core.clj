@@ -68,4 +68,5 @@
         ptpl   (parse-template utpl exprs)]; parse template
       (eval `(format ~ptpl ~@values))))
 
-;;(template "templates/template.tpl" {'person {:name "Maarten Hus"}})
+;;(template "templates/html.tpl" {'person {:name "Maarten Hus"}})
+;;(template "templates/css.tpl" {'black "#000000", 'height 1024})
