@@ -36,12 +36,12 @@ Which returns:
 ## Example 2: CSS
 
 //css.tpl
-.someclass{
+.someclass\{
     color:  (str black);
-}
-ul{
+\}
+ul\{
     width: (/ height 2);
-}
+\}
 
 Calling (template "css.tpl" {'black "#000000", 'height 1024}) will print:
 
