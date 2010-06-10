@@ -36,13 +36,10 @@ Which returns:
 ## Example 2: CSS
 
 //css.tpl
-.someclass
-{
+.someclass{
     color:  (str black);
 }
-
-ul
-{
+ul{
     width: (/ height 2);
 }
 
