@@ -14,4 +14,10 @@
   (is (= "<html>\n    <head>\n        <title>Maarten Hus</title>\n        <body>\n            <h1>9</h1>\n            <p>Whats happening with you<p>\n            <p>Maarten Hus</p>\n            <ul>\n                <li>The number is: 1</li><li>The number is: 2</li><li>The number is: 3</li><li>The number is: 4</li><li>The number is: 5</li><li>The number is: 6</li><li>The number is: 7</li><li>The number is: 8</li><li>The number is: 9</li>\n            </ul>        \n        </body>\n    </head>\n</html>" 
        (template "templates/html.tpl" {'person {:name "Maarten Hus"}})))
   (is (= ".someclass\n{\n    color:  #000000;\n}\n\nul\n{\n    width: 512;\n}"
-       (template "templates/css.tpl" {'black "#000000", 'height 1024}))))         
+       (template "templates/css.tpl" {'black "#000000", 'height 1024}))))
+
+;; Testing for not nil? because I don't know exactly what namespace it is generating.       
+(deftest map-to-ns-test
+  (is (not (nil? ('person (ns-map (map-to-ns {'person {:name "Maarten Hus"}}))))))
+  (is (not (nil? ('hank (ns-map (map-to-ns {'hank "Hank"}))))))
+  (is (not (nil? ('age (ns-map (map-to-ns {'age 15})))))))               
