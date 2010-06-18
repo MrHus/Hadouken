@@ -61,10 +61,14 @@ by file name inside of a vector of (defstruct templ :file :created-on :delete-on
 of it and adds it to the vector, and returns the parsed template. If a recored of the file is found the time gets checked to 
 see if its still valid. If its valid, just return the compiled file from the cache, if not just parse and create a new record. 
 
-## Warning
+# Warning
 
 This stuff uses eval so its probably not safe for user inputted data, but its on my todo list.
 
-## Todo
+# Install
+
+If you're using leiningen just add [hadouken "0.2.0-SNAPSHOT"] to your dependencies.
+
+# Todo
 
 Get the [walton](http://github.com/defn/walton/blob/master/src/walton/core.clj#L38) library working so extract-expressions can get imported, and to credit the writer.
