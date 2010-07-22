@@ -99,7 +99,7 @@
       (ref-set cachebox (clean-cache)))  
     (let [matches (get-from-cache file)]
       (if (not (empty? matches))
-        (slurp* (:file (nth matches 0)))
+        (slurp* (:file (first matches)))
         (do
           (add-to-cache (str *cache-dir* file) alive-for)
           (let [tpl (template file args)]
