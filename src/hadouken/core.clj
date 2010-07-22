@@ -72,7 +72,7 @@
         ptpl   (parse-template utpl exprs)]; parse template
       (eval `(format ~ptpl ~@values))))
 
-(def cachebox (ref ()))
+(def cachebox (ref []))
 (defstruct templ :file :created-on :delete-on)
 
 (defn get-from-cache
@@ -106,5 +106,5 @@
             (spit (str *cache-dir* file) tpl)
             tpl)))))) 
     
-;;(template "templates/html.tpl" {'person {:name "Maarten Hus"}})
-;;(template "templates/css.tpl" {'black "#000000", 'height 1024})
+;;(template "html.tpl" {'person {:name "Maarten Hus"}})
+;;(template "css.tpl" {'black "#000000", 'height 1024})
